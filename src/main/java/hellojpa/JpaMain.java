@@ -17,6 +17,11 @@ public class JpaMain {
         ts.begin();
         // process
         try {
+            Member member = new Member();
+            member.setId(1L);
+            member.setName("sumin");
+            member.setRoleType(RoleType.ADMIN);
+            em.persist(member);
             ts.commit();
 
         } catch (Exception e){
